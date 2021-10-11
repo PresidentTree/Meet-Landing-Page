@@ -1,0 +1,374 @@
+html {
+  box-sizing: border-box;
+ }
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1.125rem /*18px*/;
+  line-height: 1.5rem;
+  font-family: "Red Hat Display";
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(240, 21%, 20%);
+  --topMargin: 5rem;
+}
+
+body > img {
+  position: absolute;
+  top: var(--topMargin);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+main {
+  margin-top: calc(var(--topMargin) + 5.5rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+section:nth-of-type(1) {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  margin-bottom: 6.75rem;
+}
+
+.head-text {
+  margin: 0 5.5rem;
+  width: 34rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 4rem;
+}
+
+.head-text p {
+  margin: 2rem 0;
+}
+
+button {
+  font-size: 1rem;
+  font-family: inherit;
+  border: none;
+  outline: none;
+  border-radius: 1.75rem;
+  margin: 0 0.5rem;
+  font-weight: 900;
+  color: hsl(0, 0%, 100%);
+  transition: 0.3s ease;
+}
+
+button:first-of-type {
+  padding: 1rem 2.5rem;
+  background-color: hsl(192, 37%, 48%);
+}
+
+button:first-of-type:hover {
+  background-color: hsl(192, 54%, 64%);
+}
+
+.head-text span {
+  color: hsl(192, 90%, 77%);
+}
+
+.head-text button:last-of-type {
+  padding: 1rem 1.75rem;
+  background-color: hsl(267, 34%, 53%);
+}
+
+.head-text button:last-of-type:hover, .foot button:hover {
+  background-color: hsla(267, 54%, 71%);
+}
+
+section:nth-of-type(2) {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-column-gap: 1.75rem;
+  margin: 4rem 10vw 5rem;
+  max-width: 94.25rem;
+}
+
+section:nth-of-type(2) img {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+section:nth-of-type(3) {
+  width: 32rem;
+  margin: 0 auto 11.5rem;
+  text-align: center;
+}
+
+section:nth-of-type(3) p:first-of-type {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: hsl(192, 37%, 48%);
+  letter-spacing: 0.25rem;
+  margin: 0 0 1rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  line-height: 2.75rem;
+}
+
+section:nth-of-type(3) p:last-of-type {
+  margin: 2rem 0 0;
+}
+
+footer {
+  background-color: hsl(192, 37%, 48%);
+  background-image: url("https://raw.githubusercontent.com/PresidentTree/Meet-Landing-Page/main/images/desktop/image-footer.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  background-blend-mode: soft-light;
+  width: 100%;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10vw;
+  text-align: center;
+  position: relative;
+}
+
+footer a {
+  color: inherit;
+}
+
+footer > p {
+  margin: 3rem 0 0;
+}
+
+.foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  max-width: 94.25rem;
+}
+
+footer p, .foot {
+  color: hsl(0, 0%, 100%);
+}
+
+.foot h2, .foot p {
+  margin: 0;
+  width: 30%;
+}
+
+.foot button {
+  background-color: hsl(267, 34%, 53%);
+}
+
+.foot span {
+  color: hsl(268, 100%, 86%);
+}
+
+h1, h2 {
+  width: 82%;
+  margin: 0 auto;
+}
+
+p {
+  color: hsl(239, 10%, 57%);
+}
+
+.number {
+  height: 8.75rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.number p {
+  margin: 0;
+  font-size: 1rem;
+  border: 0.1rem solid hsla(240, 10%, 57%, 0.25);
+  border-radius: 100%;
+  font-weight: 900;
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(240, 10%, 57%);
+}
+
+footer .number {
+  position: absolute;
+  top: -7rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.line {
+  background-color: hsla(240, 10%, 57%, 0.25);
+  width: 0.1rem;
+  height: 5.25rem;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 920px) {
+  footer {
+    height: min-content;
+    padding: 5.75rem 12.5vw 4rem;
+    background-image: url("https://raw.githubusercontent.com/PresidentTree/Meet-Landing-Page/main/images/mobile/image-tablet-footer.jpg");
+  }
+
+  .foot {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .foot h2 {
+    width: 78%;
+  }
+
+  .foot p {
+    width: 100%;
+    margin: 2rem 0 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 1rem;
+    --topMargin: 3rem;
+  }
+
+  section:nth-of-type(1) {
+    width: 105%;
+    flex-wrap: wrap;
+    margin-bottom: 5rem;
+  }
+
+  section:nth-of-type(1) img {
+    width: 50%;
+  }
+
+  section:nth-of-type(1) img:first-of-type {
+    padding-right: 2%;
+  }
+
+  section:nth-of-type(1) img:last-of-type {
+    order: 2;
+    padding-left: 2%;
+  }
+
+  .head-text {
+    order: 3;
+    margin: 4.5rem auto 0;
+    width: 28rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+    line-height: 3rem;
+    width: 70%;
+  }
+
+  .head-text p {
+    margin: 1.5rem 0 2rem;
+  }
+
+  section:nth-of-type(2) {
+    margin-bottom: 3rem;
+    grid-column-gap: 0.75rem;
+  }
+
+  section:nth-of-type(3) {
+    width: 36rem;
+    max-width: 95%;
+    margin-bottom: 12rem;
+  }
+
+  h2 {
+    width: 78%;
+  }
+
+  footer > p {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 425px) {
+  section:nth-of-type(1) {
+    margin-bottom: 4rem;
+  }
+
+  .head-text {
+    width: 90vw;
+    margin: 3rem auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    width: 85%;
+  }
+
+  .head-text button {
+    margin: 0;
+    width: max-content;
+  }
+
+  .head-text button:first-of-type {
+    margin-bottom: 1rem;
+  }
+
+  section:nth-of-type(2) {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-gap: 1.5rem;
+    width: 90vw;
+    margin-bottom: 4rem;
+  }
+
+  section:nth-of-type(3) {
+    width: 90vw;
+    margin-bottom: 12rem;
+  }
+
+  h2, .foot h2 {
+    width: 98%;
+    font-size: 2rem;
+  }
+
+  footer {
+    height: min-content;
+    padding: 5.75rem 0 4rem;
+    align-items: center;
+    background-image: url("https://raw.githubusercontent.com/PresidentTree/Meet-Landing-Page/main/images/mobile/image-mobile-footer.jpg");
+  }
+
+  .foot {
+    width: 90vw;
+  }
+
+  .foot p {
+    margin: 1.5rem 0 2rem;
+  }
+
+  footer > p {
+    width: 90vw;
+  }
+}
